@@ -1,0 +1,25 @@
+name: image build and push
+
+on:
+  push:
+    branches: master
+    paths-ignore:
+      - '**.md'
+  schedule:
+    - cron: "0 4 */8 * *"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Login to DockerHub
+        uses: docker/login-action@v1 
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Build and push
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          tags: |
+            mehmetahsen/stoken:latest
+            mehmetahsen/stoken:${{ github.sha }}
