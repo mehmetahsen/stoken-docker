@@ -5,11 +5,11 @@
 It's based  on [cernekee's PPA](https://launchpad.net/~cernekee/+archive/ppa) as [described here](https://sourceforge.net/p/stoken/wiki/Home/).
 Entrypoint is `stoken` itself, therefore any params to container will be passed as is. See [stoken docs](https://github.com/cernekee/stoken#usage) for more information on how to use it.
 
-To provide persistency, `/root` is designated as volume. If you like to import a seed file, put it in a directory and mount it when running the container. stoken keeps a file named `.stokenrc` there.
+To provide persistency, `/root` is designated as a volume. If you like to import a seed file, put it in a directory and mount it when running the container. stoken keeps a file named `.stokenrc` there.
 
 ## How?
 
-### Build container
+### Build
 
 ```bash
 docker build -t stoken .
