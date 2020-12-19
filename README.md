@@ -1,3 +1,5 @@
+![image build and push](https://github.com/mehmetahsen/stoken-docker/workflows/image%20build%20and%20push/badge.svg?branch=master)
+
 # stoken-docker
 
 **tl;dr**: [cernekee/stoken](https://github.com/cernekee/stoken) in a container. 
