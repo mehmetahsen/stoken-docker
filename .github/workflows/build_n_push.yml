@@ -6,7 +6,7 @@ on:
     paths-ignore:
       - '**.md'
   schedule:
-    - cron: "0 4 */8 * *"
+    - cron: "0 4 4 * *" #re-build it monthly
 jobs:
   build:
     runs-on: ubuntu-latest
